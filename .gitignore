@@ -3,3 +3,4 @@ venv
 logs
 test_db.py
 Artifacts
+mlruns
