@@ -8,4 +8,10 @@ scikit-learn
 dill
 pyyaml
 mlflow
+fastapi
+uvicorn
+requests
+tldextract
+python-whois
+
 # -e .

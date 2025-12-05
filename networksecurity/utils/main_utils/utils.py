@@ -5,7 +5,7 @@ import os,sys
 import numpy as np
 import dill
 import pickle
-from sklearn.metrics import r2_score
+from sklearn.metrics import f1_score
 
 
 def read_yaml_file(file_path:str)->dict:
@@ -86,8 +86,8 @@ def evaluate_models(x_train, y_train, x_test, y_test, models):
             y_test_pred = model.predict(x_test)
 
             # Get r2 score
-            train_model_score = r2_score(y_train, y_train_pred)
-            test_model_score = r2_score(y_test, y_test_pred)
+            train_model_score = f1_score(y_train, y_train_pred)
+            test_model_score = f1_score(y_test, y_test_pred)
 
             report[list(models.keys())[i]] = test_model_score
 
